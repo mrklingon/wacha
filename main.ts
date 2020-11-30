@@ -13,6 +13,7 @@ function BuildBrain () {
 }
 input.onButtonPressed(Button.A, function () {
     pick = 1
+    basic.showNumber(pick)
     TOTAL += pick
     basic.showNumber(TOTAL)
     if (TOTAL == 10) {
@@ -24,6 +25,7 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.B, function () {
     pick = 2
+    basic.showNumber(pick)
     TOTAL += pick
     basic.showNumber(TOTAL)
     if (TOTAL == 10) {
