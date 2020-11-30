@@ -1,5 +1,6 @@
 function BuildBrain () {
     let list: number[] = []
+    Thinking()
     matrix = []
     for (let index = 0; index <= 9; index++) {
         matrix.push(randint(1, 2))
