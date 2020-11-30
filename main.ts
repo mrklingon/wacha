@@ -77,4 +77,5 @@ while (true) {
             state = "human"
         }
     }
+    basic.pause(100)
 }
