@@ -66,8 +66,8 @@ BuildBrain()
 let states = ["null", "computer", "human", "comp-win", "human-win"]
 TOTAL = 0
 state = states[randint(1, 2)]
+basic.showNumber(TOTAL)
 while (true) {
-    basic.showNumber(TOTAL)
     if (state == "computer") {
         Thinking()
         pick = matrix.removeAt(0)
