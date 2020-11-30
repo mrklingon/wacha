@@ -21,6 +21,8 @@ input.onButtonPressed(Button.A, function () {
         basic.showString("@%$% YOU win #@$")
     } else {
         state = "computer"
+        basic.showString("C")
+        basic.showNumber(TOTAL)
     }
 })
 input.onButtonPressed(Button.B, function () {
@@ -28,11 +30,13 @@ input.onButtonPressed(Button.B, function () {
     basic.showNumber(pick)
     TOTAL += pick
     basic.showNumber(TOTAL)
-    if (TOTAL == 10) {
+    if (TOTAL >= 10) {
         state = "human-win"
         basic.showString("@%$% YOU win #@$")
     } else {
         state = "computer"
+        basic.showString("C")
+        basic.showNumber(TOTAL)
     }
 })
 function Thinking () {
@@ -70,11 +74,13 @@ while (true) {
         basic.pause(100)
         TOTAL += pick
         basic.showNumber(TOTAL)
-        if (TOTAL == 10) {
+        if (TOTAL >= 10) {
             state = "comp-win"
             basic.showString("I win!!!")
         } else {
             state = "human"
+            basic.showString("H")
+            basic.showNumber(TOTAL)
         }
     }
     basic.pause(100)
