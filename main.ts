@@ -78,7 +78,7 @@ BuildBrain()
 while (true) {
     if (state == "computer") {
         Thinking()
-        pick = matrix.removeAt(TOTAL)
+        pick = matrix[TOTAL]
         basic.showNumber(pick)
         basic.pause(100)
         TOTAL += pick
