@@ -11,6 +11,15 @@ function BuildBrain () {
     list[8] = pick
     pick = 1
     list[7] = pick
+    states = ["null", "computer", "human", "comp-win", "human-win"]
+    TOTAL = 0
+    state = states[randint(1, 2)]
+    if (state == "human") {
+        basic.showString("H")
+    } else {
+        basic.showString("C")
+    }
+    basic.showNumber(TOTAL)
 }
 input.onButtonPressed(Button.A, function () {
     pick = 1
@@ -25,6 +34,9 @@ input.onButtonPressed(Button.A, function () {
         basic.showString("C")
         basic.showNumber(TOTAL)
     }
+})
+input.onButtonPressed(Button.AB, function () {
+    BuildBrain()
 })
 input.onButtonPressed(Button.B, function () {
     pick = 2
@@ -58,20 +70,12 @@ function Thinking () {
             `)
     }
 }
+let states: string[] = []
+let TOTAL = 0
 let matrix: number[] = []
 let pick = 0
 let state = ""
-let TOTAL = 0
 BuildBrain()
-let states = ["null", "computer", "human", "comp-win", "human-win"]
-TOTAL = 0
-state = states[randint(1, 2)]
-if (state == "human") {
-    basic.showString("H")
-} else {
-    basic.showString("C")
-}
-basic.showNumber(TOTAL)
 while (true) {
     if (state == "computer") {
         Thinking()
