@@ -66,7 +66,7 @@ BuildBrain()
 let states = ["null", "computer", "human", "comp-win", "human-win"]
 TOTAL = 0
 state = states[randint(1, 2)]
-if (state == "Human") {
+if (state == "human") {
     basic.showString("H")
 } else {
     basic.showString("C")
