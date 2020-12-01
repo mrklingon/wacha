@@ -1,16 +1,15 @@
 function BuildBrain () {
-    let list: number[] = []
     Thinking()
     matrix = []
-    for (let index = 0; index <= 9; index++) {
+    for (let index = 0; index <= 10; index++) {
         matrix.push(randint(1, 2))
     }
     pick = 1
-    list[9] = pick
+    matrix[9] = pick
     pick = 2
-    list[8] = pick
+    matrix[8] = pick
     pick = 1
-    list[7] = pick
+    matrix[7] = pick
     states = ["null", "computer", "human", "comp-win", "human-win"]
     TOTAL = 0
     state = states[randint(1, 2)]
@@ -79,7 +78,7 @@ BuildBrain()
 while (true) {
     if (state == "computer") {
         Thinking()
-        pick = matrix.removeAt(0)
+        pick = matrix.removeAt(TOTAL)
         basic.showNumber(pick)
         basic.pause(100)
         TOTAL += pick
